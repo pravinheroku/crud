@@ -9,7 +9,7 @@
       <h6>Start adding required details for your record.</h6>
       <hr />
       <br />
-      <form action="" method="post" autocomplete="off">
+      <form action="{% url 'create-record' %}" method="POST" autocomplete="off">
         {% csrf_token %}
 
         {{ form.first_name|as_crispy_field }}

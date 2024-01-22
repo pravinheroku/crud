@@ -8,7 +8,7 @@
       <h3>Login to your account</h3>
       <hr />
       <br />
-      <form action="" method="post" autocomplete="off">
+      <form action="{% url 'my-login' %}" method="POST" autocomplete="off">
         {% csrf_token %}
 
         {{ form.username|as_crispy_field }}

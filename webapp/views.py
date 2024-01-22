@@ -15,8 +15,8 @@ from django.contrib import messages
 def home(request):
     return render(request, "webapp/index.html")
 
-from django.views.decorators.csrf import csrf_exempt
-@csrf_exempt
+# from django.views.decorators.csrf import csrf_exempt
+# @csrf_exempt
 def register(request):
     form = CreateUserForm()
 
@@ -31,8 +31,8 @@ def register(request):
     context = {"form":form,}
     return render(request, "webapp/register.html", context=context)
 
-from django.views.decorators.csrf import csrf_exempt    
-@csrf_exempt    
+# from django.views.decorators.csrf import csrf_exempt    
+# @csrf_exempt    
 def my_login(request):
     form = LoginForm()
 
